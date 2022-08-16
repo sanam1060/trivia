@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font families used in this project */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 70px 70px;
+  background-color: #eb1736;
+  color: white;
+  width: 90%;
+  height: 600px;
+}
+
+.main-content{
+margin: 90px 70px;
+}
+
+.scores-and-timer{
+  font-size: 20px;
+  width: 100%;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Trivia */
+.main-content h1{
+  font-weight: bold;
+  font-size: 60px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  background-color: blue;
+}
+
+/* Start button */
+.btn-start-quiz{
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 40px;
+  color: #eb1736;
+  font-size: 30px;
+}
+
+.btn-start-quiz:hover{
+  background-color: #5252d4;
+  color: aliceblue;
+}
+
