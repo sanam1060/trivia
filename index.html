@@ -28,6 +28,43 @@
         <button id="btn-start-quiz">Start Quiz</button>
     </main>
 
+    <!-- section questions and answers-->
+    <section id="quiz-content" class="main-content">
+      <h2 id="question" class="questions-title-section">Question</h2>
+      <div id="answers-section">
+        <button id="a" class="abcd" onclick="">a</button>
+        <button id="b" class="abcd" onclick="">b</button>
+        <button id="c" class="abcd" onclick="">c</button>
+        <button id="d" class="abcd" onclick="">d</button>
+      </div>
+    </section>
+    
+    <!--result-->
+    <section id="result">
+      <div id="container">
+        <i id="correct">Correct!</i>
+        <i id="wrong">Wrong!</i>
+      </div>
+    </section>
+    
+    <!-- section end of quiz - put username/high score -->
+    <div id="end-quiz">
+      <div id="finalScore"></div>
+      <input type="text" size="40" placeholder="Enter your initials" name="initials" id="initials" />
+      <button id="submitScore">Submit</button>
+    </div>
+    
+    <!-- section high score -->
+    <div id="high-scores-page">
+      <h2>High scores</h2>
+      <ul id="high-score-list"></ul>
+      
+      <div id="end-buttons">
+        <button id="go-back" onclick="">Go back</button>
+        <button id="clear-high-scores" onclick="">Clear high scores</button>
+      </div>
+    </div>
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

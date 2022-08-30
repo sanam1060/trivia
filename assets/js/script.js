@@ -51,8 +51,6 @@ var startTimer = function () {
   tasksToDoEl.appendChild(listItemEl);
 };
 
-// DOM elements
-
 // timer function
 
 // addEventListeners - click
