@@ -11,52 +11,79 @@ body {
   flex-direction: column;
 }
 
-.home-content {
+.main-content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin: 70px 70px;
-  background-color: #eb1736;
-  color: white;
-  width: 90%;
-  height: 600px;
+  
 }
 
-.main-content{
-margin: 90px 70px;
+.questions-title-section {
+  font-size: 45px;
+  margin: 50px;
+  color: #eb1736;
+  text-align: center;
 }
 
-.scores-and-timer{
+#btn-high-scores {
+  margin: 30px;
+  color: #eb1736;
+  background-color: white;
   font-size: 20px;
-  width: 100%;
-  padding: 15px 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Trivia */
-.main-content h1{
-  font-weight: bold;
-  font-size: 60px;
-  margin-top: 70px;
-  margin-bottom: 70px;
-  background-color: blue;
-}
-
-/* Start button */
-.btn-start-quiz{
   border: none;
   border-radius: 12px;
   padding: 10px 20px;
-  margin: 40px;
-  color: #eb1736;
-  font-size: 30px;
 }
 
-.btn-start-quiz:hover{
+#btn-high-scores:hover{
   background-color: #5252d4;
   color: aliceblue;
 }
 
+.view-high-scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  font-size: 20px;
+  color:  #5252d4;
+  background-color: white;
+}
+
+#timer {
+  margin: 30px;
+  color: #eb1736;
+  background-color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+#home-text-section {
+  margin: 30px;
+}
+
+#btn-start-quiz {
+  margin: 30px;
+  color: #eb1736;
+  background-color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+#btn-start-quiz:hover{
+  background-color: #5252d4;
+  color: aliceblue;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.home-text {
+  text-align: center;
+}

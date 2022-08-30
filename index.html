@@ -3,26 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trivia</title>
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
     <!-- header -->
-    <header>
-      
+    <header id="header">
+      <div class="view-high-scores">
+        <button id="btn-high-scores">View high scores</button>
+        <p id="timer" class="timer">Timer</p>
+      </div>
     </header>
-    <main class="home-content">
-      <div class="scores-and-timer">
-        <p>View High Scores</p>
-        <p id="timer">Time</p>
+
+    <!-- section start/homepage challenge -->
+    <main class="home-content" class="main-content">
+      <h2 id="title-section" class="questions-title-section">Trivia: Computer Basics</h2>
+      <div id="home-text-section">
+        <p class="home-text text">
+          Click the button below to start the game.</br>
+          * Incorrect answers will penalize your time by ten seconds!
+        </p>
       </div>
-      <div class="main-content">
-        <h1>Trivia</h1>
-        <p>Click the button below to start the game.</p>
-        <p>* Incorrect answers will penalize your time by ten seconds!</p>
-        <button class="btn-start-quiz">Start</button>
-      </div>
+        <button id="btn-start-quiz">Start Quiz</button>
     </main>
 
     <script src="./assets/js/script.js"></script>
