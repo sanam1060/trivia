@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,64 +8,69 @@
     <title>Trivia</title>
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
+  
   <body>
     <!-- header -->
     <header id="header">
-      <div class="view-high-scores">
+      <div id="view-high-scores">
         <button id="btn-high-scores">View high scores</button>
-        <p id="timer" class="timer">Timer</p>
+        <p id="timer">Time: 0</p>
       </div>
     </header>
-
-    <!-- section start/homepage challenge -->
-    <main class="home-content" class="main-content">
-      <h2 id="title-section" class="questions-title-section">Trivia: Computer Basics</h2>
+    
+    <!-- section start -->
+    <main id="home-content" class="main-content">
+      <h2 id="title-section" class="questions-title-section">Coding Quiz Challenge: JavaScript fundamentals</h2>
       <div id="home-text-section">
         <p class="home-text text">
-          Click the button below to start the game.</br>
-          * Incorrect answers will penalize your time by ten seconds!
+          Try to answer the following code-related questions within the time limit. </br>
+          Keep in mind that incorrect answers will penalize your score/time </br>
+          by ten seconds!
         </p>
       </div>
-        <button id="btn-start-quiz">Start Quiz</button>
+      <button id="btn-start-quiz">Start Quiz</button>
     </main>
 
-    <!-- section questions and answers-->
-    <section id="quiz-content" class="main-content">
-      <h2 id="question" class="questions-title-section">Question</h2>
-      <div id="answers-section">
-        <button id="a" class="abcd" onclick="">a</button>
-        <button id="b" class="abcd" onclick="">b</button>
-        <button id="c" class="abcd" onclick="">c</button>
-        <button id="d" class="abcd" onclick="">d</button>
+    <!-- section questions/answers-->
+    <section id="quiz-content" class="main-content hide">
+      <div id="questionsAnswers">
+        <h2 id="question" class="questions-title-section">Question</h2>
+        <div id="answersId" class="answersList">
+          <button id="a" class="abcd" onclick="rightWrong('a')">a</button>
+          <button id="b" class="abcd" onclick="rightWrong('b')">b</button>
+          <button id="c" class="abcd" onclick="rightWrong('c')">c</button>
+          <button id="d" class="abcd" onclick="rightWrong('d')">d</button>
+        </div>
+      </div>
+
+      <div id="progress" class="correctWrong hide">
+        <p id="correct" class="hide">Correct!</p>
+        <p id="wrong" class="hide">Wrong!</p>
       </div>
     </section>
     
-    <!--result-->
-    <section id="result">
-      <div id="container">
-        <i id="correct">Correct!</i>
-        <i id="wrong">Wrong!</i>
+    <!-- section end of quiz -->
+    <div id="end-quiz" class="hide">
+      <h1>All done!</h1>
+      <p id="finalScore"></p>
+      <div class="end-quiz-input">
+        <p class="end-quiz-p">
+          Enter initials:
+          <input type="text" placeholder="Enter your initials" name="initials" id="initials" />
+          <button id="submitScore" class="btn-submit">Submit</button>
+        </p>
       </div>
-    </section>
-    
-    <!-- section end of quiz - put username/high score -->
-    <div id="end-quiz">
-      <div id="finalScore"></div>
-      <input type="text" size="40" placeholder="Enter your initials" name="initials" id="initials" />
-      <button id="submitScore">Submit</button>
     </div>
     
     <!-- section high score -->
-    <div id="high-scores-page">
-      <h2>High scores</h2>
+    <div id="high-scores-page" class="main-content hide">
+      <h1>High scores</h1>
       <ul id="high-score-list"></ul>
-      
       <div id="end-buttons">
-        <button id="go-back" onclick="">Go back</button>
-        <button id="clear-high-scores" onclick="">Clear high scores</button>
+        <button id="btn-go-back" onclick="">Go back</button>
+        <button id="btn-clear-high-scores" onclick="">Clear high scores</button>
       </div>
     </div>
-
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

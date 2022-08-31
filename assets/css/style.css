@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* Global */
+
 /* font families used in this project */
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -17,7 +19,8 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  
+  width: 80%;
+  margin-left: 150px;
 }
 
 .questions-title-section {
@@ -25,7 +28,14 @@ body {
   margin: 50px;
   color: #eb1736;
   text-align: center;
+  margin-left: 0;
 }
+
+.hide {
+  display: none;
+}
+
+/* Header */
 
 #btn-high-scores {
   margin: 30px;
@@ -42,7 +52,7 @@ body {
   color: aliceblue;
 }
 
-.view-high-scores {
+#view-high-scores {
   display: flex;
   justify-content: space-between;
 }
@@ -84,18 +94,19 @@ p {
   font-size: 18px;
 }
 
+#title-section {
+  text-align: center;
+}
+
 .home-text {
   text-align: center;
 }
 
-#answers-section {
-  margin: 30px;
-}
-
-#answers-section {
+#answersId {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 30px;
 }
 
 .abcd {
@@ -106,8 +117,81 @@ p {
   background-color: #5252d4;
   border-radius: 12px;
   padding: 10px 20px;
+  width: 200px;
+  text-align: left;
 }
+
+.abcd:hover {
+  background-color: #eb1736;
+  color: white;
+}
+
+.correctWrong {
+  color: aqua;
+  border-top: grey solid 1px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Highscore sectino */
+
+.end-quiz-p {
+  font-size: 16px;
+}
+
+.btn-submit {
+  margin: 10px;
+  color: white;
+  font-size: 14px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 10px;
+}
+
+.btn-submit:hover{
+  background-color: aquamarine;
+}
+
+#end-quiz {
+  display: flex;
+  margin-left: 300px;
+}
+
+/* Highscore section*/
 
 ul {
   background-color: #eb1736;
+}
+
+#btn-go-back {
+    margin: 10px;
+    color: white;
+    font-size: 14px;
+    background-color:yellow;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 10px;
+}
+
+#btn-go-back:hover {
+    background-color: brown;
+}
+
+#btn-clear-high-scores {
+    margin: 10px;
+    color: white;
+    font-size: 14px;
+    background-color:blue;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 10px;
+}
+
+#btn-clear-high-scores:hover {
+    background-color: violet;
+}
+
+#high-scores-page {
+    margin-bottom: 40px;
 }

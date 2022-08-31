@@ -34,23 +34,127 @@ let questions = [
   },
   {
     question: "How many generations of computers have been invented?",
-    answerA: "1. Seven generations",
+    answerA: "1. Two generations",
     answerB: "2. Four generations",
     answerC: "3. Six generations",
     answerD: "4. Five generations",
     correctAnswer: "d",
-  },
+  }
 ];
 
-// DOM elements used in this project:
-var buttonEl = document.querySelector(".btn-start-quiz");
+// DOM elements
+var quizContent = document.getElementById('quiz-content');
+var result = document.getElementById('result');
+var endQuiz = document.getElementById('end-quiz');
+var finalScore = document.getElementById('finalScore'); 
+var viewHighScores = document.getElementById('view-high-scores');
+var btnStartQuiz = document.getElementById('btn-start-quiz');
+var homeContent = document.getElementById('home-content');
+var quizContent = document.getElementById('quiz-content');
+var question = document.getElementById('question');
+var btna = document.getElementById('a');
+var btnb = document.getElementById('b');
+var btnc = document.getElementById('c');
+var btnd = document.getElementById('d');
+var progress = document.getElementById('progress');
+var correctAlert = document.getElementById('correct');
+var wrongAlert = document.getElementById('wrong');
+var scoreContainer = document.getElementById('high-scores-page');
+var viewHighScore = document.getElementById('btn-high-scores');
+var endQuiz = document.getElementById('end-quiz');
+var answersId = document.getElementById('answersId');
+var questionsAnswers = document.getElementById('questionsAnswers');
+var goBack = document.getElementById('btn-go-back');
+var clearHighScores = document.getElementById('btn-clear-high-scores');
+var submitScore = document.getElementById('submitScore');
 
-var startTimer = function () {
-  var timerEl = document.createElement("div");
-  timerEl.className = "timer";
-  tasksToDoEl.appendChild(listItemEl);
+// I will use these variables later
+let score = 0;
+let runningQuestionIndex = 0;
+let lastQuestionIndex = questions.length - 1;
+
+// prevent endQuiz from appreaning on the homepage
+endQuiz.style.display = "none";
+
+// New questions appear
+function quizQuestions(){
+  var q = questions[runningQuestionIndex];
+  question.innerHTML = q.question;
+  btna.innerHTML = q.answerA;
+  btnb.innerHTML = q.answerB;
+  btnc.innerHTML = q.answerC;
+  btnd.innerHTML = q.answerD;
 };
 
-// timer function
+function renderProgress() {
+  for (var qIndex = 0; qIndex <= lastQuestion; qIndex++) {
+    progress.innerHTML += "<div class='prog' id=" + qIndex + "></div>";
+  }
+};
 
-// addEventListeners - click
+function answerIsCorrect() {
+  progress.style.display = "block";
+  correctAlert.style.display = "block";
+  wrongAlert.style.display = "none";
+  alert("Correct!");
+};
+
+function answerIsWrong() {
+  progress.style.display = "block";
+  wrongAlert.style.display = "block";
+  correctAlert.style.display = "none";
+  alert("Wrong! You loose 10 seconds on the timer :(");
+};
+
+function enterScore() {
+  questionsAnswers.style.display = "none";
+  endQuiz.style.display = "block";
+};
+
+function rightWrong(answer) {
+  if (questions[runningQuestionIndex].correct == answer) {
+    score++;
+    answerIsCorrect();
+  } else if (questions[runningQuestionIndex].correct !== answer) {
+    answerIsWrong();
+  }
+
+  if (runningQuestionIndex < lastQuestionIndex) {
+    runningQuestionIndex++;
+    quizQuestions();
+  } else {
+    enterScore();
+  }
+};
+
+function startQuiz() {
+  homeContent.style.display="none";
+  endQuiz.style.display="none";
+  quizContent.style.display="block";
+  quizQuestions();
+};
+
+function scoreRender() {
+  endQuiz.style.display = "none";
+  homeContent.style.display = "none";
+  quizContent.style.display = "none";
+  scoreContainer.style.display = "block";
+  let scorePerCent = Math.round((100 * score) / questions.length);
+};
+
+function submitScoreInitial() {
+  alert("You are all set!");
+};
+
+function goBackFunction() {
+  homeContent.style.display = "block";
+  quizContent.style.display = "none";
+  scoreContainer.style.display = "none";
+};
+
+// Event listeners
+btnStartQuiz.addEventListener("click", startQuiz);
+viewHighScore.addEventListener("click", scoreRender);
+goBack.addEventListener("click", goBackFunction);
+clearHighScores.addEventListener("click", function (evt) {});
+submitScore.addEventListener("click", submitScoreInitial);
