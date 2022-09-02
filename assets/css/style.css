@@ -45,6 +45,7 @@ body {
   border: none;
   border-radius: 12px;
   padding: 10px 20px;
+  text-decoration: none;
 }
 
 #btn-high-scores:hover{

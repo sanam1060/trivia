@@ -67,11 +67,14 @@ var questionsAnswers = document.getElementById('questionsAnswers');
 var goBack = document.getElementById('btn-go-back');
 var clearHighScores = document.getElementById('btn-clear-high-scores');
 var submitScore = document.getElementById('submitScore');
+var finalScore = document.getElementById("finalScore");
+var timerNum = document.getElementById("timer-num");
 
 // I will use these variables later
-let score = 0;
-let runningQuestionIndex = 0;
-let lastQuestionIndex = questions.length - 1;
+var score = 0;
+var runningQuestionIndex = 0;
+var lastQuestionIndex = questions.length - 1;
+var timeoutID; 
 
 // prevent endQuiz from appreaning on the homepage
 endQuiz.style.display = "none";
@@ -96,6 +99,7 @@ function answerIsCorrect() {
   progress.style.display = "block";
   correctAlert.style.display = "block";
   wrongAlert.style.display = "none";
+  score++;
   alert("Correct!");
 };
 
@@ -103,21 +107,26 @@ function answerIsWrong() {
   progress.style.display = "block";
   wrongAlert.style.display = "block";
   correctAlert.style.display = "none";
+  timer = timer - 10;
   alert("Wrong! You loose 10 seconds on the timer :(");
 };
 
 function enterScore() {
   questionsAnswers.style.display = "none";
   endQuiz.style.display = "block";
+   document.getElementById("finalScore").innerHTML =
+     "Your score is " + score + " points.";
 };
 
 function rightWrong(answer) {
-  if (questions[runningQuestionIndex].correct == answer) {
-    score++;
+  if (answer == questions[runningQuestionIndex].correctAnswer) {
     answerIsCorrect();
-  } else if (questions[runningQuestionIndex].correct !== answer) {
+  } else {
     answerIsWrong();
+    console.log(answer);
+    console.log(questions[runningQuestionIndex].correctAnswer);
   }
+  
 
   if (runningQuestionIndex < lastQuestionIndex) {
     runningQuestionIndex++;
