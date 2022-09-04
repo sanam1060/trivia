@@ -15,7 +15,7 @@
       <div id="view-high-scores">
         <a href="#" id="btn-high-scores">View high scores</a>
         <div id="timer">
-          <span>Time: <b id="timer-num">0</b></span>
+          <span>Time: <b id="timerNumber">0</b></span>
         </div>
       </div>
     </header>
@@ -60,6 +60,7 @@
           Enter initials:
           <input type="text" placeholder="Enter your initials" name="initials" id="initials" />
           <button id="submitScore" class="btn-submit">Submit</button>
+          <button id="replay" class="btn-replay">Start Again</button>
         </p>
       </div>
     </div>
@@ -67,10 +68,11 @@
     <!-- section high score -->
     <div id="high-scores-page" class="main-content hide">
       <h1>High scores</h1>
-      <ul id="high-score-list"></ul>
+      <ul id="highscore-initials"></ul>
+      <div id="highscore-score"></div>
       <div id="end-buttons">
-        <button id="btn-go-back" onclick="">Go back</button>
-        <button id="btn-clear-high-scores" onclick="">Clear high scores</button>
+        <button type="button" id="btn-go-back" onclick="">Go back</button>
+        <button type="button" id="btn-clear-high-scores" onclick="">Clear high scores</button>
       </div>
     </div>
     <script src="./assets/js/script.js"></script>

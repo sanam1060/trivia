@@ -6,8 +6,8 @@
 
 /* Global */
 
-/* font families used in this project */
 body {
+  /* font families used in this project */
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -17,18 +17,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   text-align: center;
-  width: 80%;
+  flex-direction: column;
   margin-left: 150px;
+  width: 80%;
 }
 
 .questions-title-section {
   font-size: 45px;
   margin: 50px;
   color: #eb1736;
-  text-align: center;
   margin-left: 0;
+  text-align: center;
 }
 
 .hide {
@@ -105,8 +105,8 @@ p {
 
 #answersId {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
+  flex-direction: column;
   margin: 30px;
 }
 
@@ -154,6 +154,20 @@ p {
   background-color: aquamarine;
 }
 
+.btn-replay {
+  margin: 10px;
+  color: white;
+  font-size: 14px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 10px;
+}
+
+.btn-replay:hover {
+    background-color: var(--secondary-color);
+}
+
 #end-quiz {
   display: flex;
   margin-left: 300px;
@@ -163,6 +177,12 @@ p {
 
 ul {
   background-color: #eb1736;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
 }
 
 #btn-go-back {
