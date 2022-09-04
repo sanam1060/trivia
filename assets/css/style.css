@@ -41,7 +41,7 @@ body {
   margin: 30px;
   color: #eb1736;
   background-color: white;
-  font-size: 20px;
+  font-size: 25px;
   border: none;
   border-radius: 12px;
   padding: 10px 20px;
@@ -60,7 +60,7 @@ body {
 
 p {
   font-size: 20px;
-  color:  #5252d4;
+  color: #5252d4;
   background-color: white;
 }
 
@@ -68,7 +68,7 @@ p {
   margin: 30px;
   color: #eb1736;
   background-color: white;
-  font-size: 20px;
+  font-size: 25px;
   padding: 10px 20px;
 }
 
@@ -80,7 +80,7 @@ p {
   margin: 30px;
   color: #eb1736;
   background-color: white;
-  font-size: 20px;
+  font-size: 25px;
   border: none;
   border-radius: 12px;
   padding: 10px 20px;
@@ -92,7 +92,7 @@ p {
 }
 
 .text {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 #title-section {
@@ -114,7 +114,7 @@ p {
   margin: 3px;
   border: none;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   background-color: #5252d4;
   border-radius: 12px;
   padding: 10px 20px;
@@ -137,36 +137,37 @@ p {
 /* Highscore sectino */
 
 .end-quiz-p {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .btn-submit {
   margin: 10px;
   color: white;
-  font-size: 14px;
-  background-color: var(--primary-color);
+  font-size: 20px;
+  background-color: #eb1736;
   border: none;
   border-radius: 12px;
   padding: 10px 10px;
 }
 
 .btn-submit:hover{
-  background-color: aquamarine;
+  background-color: #5252d4;
 }
 
 .btn-replay {
   margin: 10px;
   color: white;
-  font-size: 14px;
-  background-color: var(--primary-color);
+  font-size: 20px;
+  background-color: #eb1736;
   border: none;
   border-radius: 12px;
   padding: 10px 10px;
 }
 
 .btn-replay:hover {
-    background-color: var(--secondary-color);
-}
+    background-color: #5252d4;
+    font-size: 20px;
+};
 
 #end-quiz {
   display: flex;
@@ -176,7 +177,8 @@ p {
 /* Highscore section*/
 
 ul {
-  background-color: #eb1736;
+  color: #eb1736;
+  font-size: 20px;
 }
 
 li {
@@ -188,31 +190,32 @@ li {
 #btn-go-back {
     margin: 10px;
     color: white;
-    font-size: 14px;
-    background-color:yellow;
+    font-size: 20px;
+    background-color:grey;
     border: none;
     border-radius: 12px;
     padding: 10px 10px;
 }
 
 #btn-go-back:hover {
-    background-color: brown;
+    background-color: #eb1736;
 }
 
 #btn-clear-high-scores {
     margin: 10px;
     color: white;
-    font-size: 14px;
-    background-color:blue;
+    font-size: 20px;
+    background-color:grey;
     border: none;
     border-radius: 12px;
     padding: 10px 10px;
 }
 
 #btn-clear-high-scores:hover {
-    background-color: violet;
+    background-color: #eb1736;
 }
 
 #high-scores-page {
     margin-bottom: 40px;
+    color: #5252d4;
 }
